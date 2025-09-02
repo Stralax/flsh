@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -static-libgcc -rdynamic CMakeFiles/rand_tags.dir/rand_tags.cpp.o -o ../../../bin/rand_tags  ../../../lib/libtlsh.a 

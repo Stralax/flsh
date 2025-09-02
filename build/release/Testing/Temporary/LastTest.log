@@ -1,0 +1,112 @@
+Start testing: Sep 01 07:24 CEST
+----------------------------------------------------------
+1/1 Testing: tlsh_unittest_len_xlen
+1/1 Test: tlsh_unittest_len_xlen
+Command: "/home/maxmagnus/Documents/TEST/tlsh-4.12.0/Testing/test.sh"
+Directory: /home/maxmagnus/Documents/TEST/tlsh-4.12.0/build/release/Testing
+"tlsh_unittest_len_xlen" start time: Sep 01 07:24 CEST
+Output:
+----------------------------------------------------------
+Scenario: tlsh	(c++ standard version)...
+TLSH_PROG=../bin/tlsh
+HASH is 128
+CHKSUM is 1
+SLDWIN is 5
+Scenario:     considering len, ...
+
+test 1
+
+../bin/tlsh -r example_data -o tmp/example_data.out 2> tmp/example_data.err
+passed
+../bin/tlsh -r example_data -o tmp/example_data.json_out -ojson 2> tmp/example_data.err
+passed
+
+test 2
+
+../bin/tlsh -r example_data -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores 2> tmp/example_data.err2
+passed
+
+test 3
+
+../bin/tlsh -l tmp/example_data.out -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.2
+passed
+
+test 4
+
+../bin/tlsh -xref -r example_data -o tmp/example_data.xref.scores
+passed
+../bin/tlsh -xref -r example_data -o tmp/example_data.xref.json_scores -ojson
+passed
+
+test 5
+
+../bin/tlsh -T 201 -l tmp/example_data.out -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.2.T-201
+passed
+
+Scenario: not considering len, ...
+
+test 1
+
+../bin/tlsh -r example_data -o tmp/example_data.out 2> tmp/example_data.err
+passed
+../bin/tlsh -r example_data -o tmp/example_data.json_out -ojson 2> tmp/example_data.err
+passed
+
+test 2
+
+../bin/tlsh -xlen -r example_data -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores 2> tmp/example_data.err2
+passed
+
+test 3
+
+../bin/tlsh -xlen -l tmp/example_data.out -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.2
+passed
+
+test 4
+
+../bin/tlsh -xref -xlen -r example_data -o tmp/example_data.xref.scores
+passed
+../bin/tlsh -xref -xlen -r example_data -o tmp/example_data.xref.json_scores -ojson
+passed
+
+test 5
+
+../bin/tlsh -T 201 -xlen -l tmp/example_data.out -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.2.T-201
+passed
+
+test 6
+
+./testlen.sh ../bin/tlsh 22 > tmp/testlen.out
+passed
+
+test 7
+
+../bin/tlsh -force -f example_data/small.txt -o tmp/small.tlsh
+../bin/tlsh -force -f example_data/small2.txt -o tmp/small2.tlsh
+passed
+
+test 8
+
+../bin/tlsh -T 201 -l2 -l example_data_col_swap.tlsh -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.l2.T-201
+../bin/tlsh -T 201 -l2 -lcsv -l example_data_col_swap.csv -c example_data/website_course_descriptors06-07.txt -o tmp/example_data.scores.l2csv.T-201
+passed
+
+test 9
+
+../bin/tlsh -split 50,100,200 -f example_data/Week3.txt -o tmp/example_data.Week3.split.tlsh
+passed
+
+Running ../bin/simple_unittest
+passed all example data tests
+
+If you have made changes to the Tlsh python module, build and install it, and run python_test.sh
+
+<end of output>
+Test time =   3.46 sec
+----------------------------------------------------------
+Test Passed.
+"tlsh_unittest_len_xlen" end time: Sep 01 07:24 CEST
+"tlsh_unittest_len_xlen" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Sep 01 07:24 CEST

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libtlsh.a CMakeFiles/tlsh_static.dir/tlsh.cpp.o CMakeFiles/tlsh_static.dir/tlsh_impl.cpp.o CMakeFiles/tlsh_static.dir/tlsh_util.cpp.o CMakeFiles/tlsh_static.dir/input_desc.cpp.o CMakeFiles/tlsh_static.dir/shared_file_functions.cpp.o
+/usr/bin/ranlib ../../../lib/libtlsh.a

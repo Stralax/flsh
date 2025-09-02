@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -static-libgcc -rdynamic CMakeFiles/tlsh_parts.dir/tlsh_parts.cpp.o -o ../../../bin/tlsh_parts  ../../../lib/libtlsh.a 

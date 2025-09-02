@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -static-libgcc -rdynamic CMakeFiles/tlsh_unittest.dir/tlsh_unittest.cpp.o -o ../../../bin/tlsh_unittest  ../../../lib/libtlsh.a 

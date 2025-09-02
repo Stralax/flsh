@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -static-libgcc -rdynamic CMakeFiles/tlsh_pattern.dir/tlsh_pattern.cpp.o -o ../../../bin/tlsh_pattern  ../../../lib/libtlsh.a 
